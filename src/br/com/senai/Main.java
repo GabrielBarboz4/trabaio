@@ -68,21 +68,16 @@ public class Main {
 	public static Contatos cadastrarContato() {
 		Contatos contato = new Contatos();
 		id = id + 1;
-		id = contato.idContato;
-		;
+		contato.idContato=id;
 		System.out.print("Informe o nome: ");
-		input.nextLine();
 		contato.nome = input.nextLine();
-		;
 		do {
 			System.out.println("Informe o numero: (XX) XXXX-XXXXX ");
 		contato.numero = input.nextLine();
 		if (!isValidTelefone(contato.numero)) {
 			System.out.println("O número de telefone é inválido.");
 		}
-		;
 		}while(!isValidTelefone(contato.numero));
-		;
 		do {
 			System.out.println("Informe um email: ");
 			contato.email = input.nextLine();
@@ -93,7 +88,6 @@ public class Main {
 		
 		return contato;
 		}
-	;
 	public static void exibirMenu() {
         System.out.println("BEM VINDO A AGENDA");
         System.out.println("Digite a opção desejada:");
